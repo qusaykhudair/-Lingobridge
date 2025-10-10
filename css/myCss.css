@@ -1,0 +1,436 @@
+:root {
+    --primary-color: #ff4242;
+    --secondary-color: #000000;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+a:hover{
+    text-decoration: none;
+    color:#ff4242;
+    transform: scale(1.1);
+
+}
+
+.BGblack{
+    background-color: var(--secondary-color);
+}
+
+.Bg-primary-red{
+    background-color: var(--primary-color);
+}
+
+.Bg-primary-black{
+    background-color: var(--secondary-color);
+}
+
+.somedia-icon i{
+    padding: 6px;
+    border-radius: 50%;
+    border: #ffffff 1px solid;
+    transition: all 0.3s ease;
+}
+
+.somedia-icon i:hover{
+    background-color: var(--primary-color);
+    border: var(--primary-color) 1px solid;
+    color: white;
+    transform: scale(1.1);
+}
+
+.nav-logo{
+    width: 2.5rem;
+     height:2.5rem ;
+      object-fit: cover;
+       border-radius: 50%;
+        margin-right: 10px;
+}
+
+.navbar h1{
+font-size: 15px;
+color: var(--primary-color);
+}
+
+.nav-link{
+ color: var(--secondary-color) !important;
+}
+
+.active{
+    color: var(--primary-color) !important;
+}
+
+.joinUsBtn{
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.joinUsBtn:hover{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border: var(--primary-color) 1px solid;
+    transform: scale(1.1);
+}
+
+
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+
+
+.section-title h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.owl-carousel.courses-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.courses-item {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    padding-inline: 3px;
+     background-color: #fff; /* يمنع ظهور ظل أسود بين الصور */
+
+}
+
+.courses-item img:hover {
+    transform: translateY(-10px);
+}
+
+.courses-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.courses-item:hover img {
+    opacity: 0.4;
+}
+
+.courses-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:  transparent;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.courses-text h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+     white-space: nowrap;        /* يمنع النزول للسطر التالي */
+    overflow: hidden;           /* يخفي أي نص زائد */
+    text-overflow: ellipsis;    /* يضيف "..." في نهاية النص */
+}
+
+.courses-text .border-top {
+    border-top: 2px solid #ff4242;
+}
+
+.courses-text p {
+    font-size: 14px;
+    color: #fff;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.courses-item:hover .courses-text p {
+    opacity: 1;
+    max-height: 200px;
+}
+
+.courses-item:hover .courses-text {
+    background: linear-gradient(to top, rgba(59, 0, 0, 0.928), transparent);
+
+}
+
+
+.courses-text p {
+    font-size: 14px;
+    color: #fff;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.5s ease;
+}
+
+
+/* ✅ عند hover نعرض النص كامل مع Scroll في حال كان طويل */
+.courses-item:hover .courses-text p {
+    opacity: 1;
+    max-height: 250px; 
+    overflow-y: auto;  
+    padding-right: 5px; 
+}
+
+/* ✅ تحسين شكل الـ scrollbar */
+.courses-text p::-webkit-scrollbar {
+    width: 5px;
+}
+.courses-text p::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+.courses-text p::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .courses-item {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .section-title h1 {
+        font-size: 28px;
+    }
+}
+
+
+
+
+.contact-box {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px 45px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.contact-box h2 {
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1.8px solid #ddd;
+  border-radius: 10px;
+  background: #fafafa;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.input-group:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(255, 66, 66, 0.2);
+  background: #fff;
+}
+
+.input-group-text {
+  background: none;
+  padding: 10px 14px;
+  color: var(--primary-color);
+  font-size: 17px;
+}
+
+.form-control {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px 14px;
+  flex: 1;
+  font-size: 15px;
+  color: #333;
+}
+
+textarea.form-control {
+  border: 1.8px solid #ddd;
+  border-radius: 10px;
+  padding: 12px 15px;
+  resize: none;
+  background: #fafafa;
+  transition: all 0.3s ease;
+}
+
+textarea.form-control:focus {
+  border-color: var(--primary-color);
+  background: #fff;
+  box-shadow: 0 0 8px rgba(255, 66, 66, 0.2);
+}
+
+.btn-submit {
+  width: 100%;
+  background: linear-gradient(135deg, #ff4242, #ff6b6b);
+  color: white;
+  padding: 14px 0;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 66, 66, 0.3);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 66, 66, 0.4);
+}
+
+@media (max-width: 992px) {
+  .contact-box {
+    max-width: 100%;
+    padding: 30px 25px;
+  }
+
+  .contact-box h2 {
+    font-size: 22px;
+  }
+}
+
+
+.contact-info {
+  margin-top: 0px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center; /* ✅ لتوسيط العناصر أفقياً */
+  align-items: center;
+  flex-wrap: wrap; /* ✅ يجعلها تستجيب للشاشات الصغيرة */
+  gap: 20px;
+  padding: 30px;
+}
+
+.info-item {
+  background: #ffffff;
+  border-radius: 12px;
+  flex: 1 1 280px; /* ✅ يجعل كل عنصر بنفس الحجم تقريباً */
+  min-width: 260px;
+  max-width: 350px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 0 auto; /* ✅ يضمن بقاء كل مربع في منتصف الصف */
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 66, 66, 0.2);
+}
+
+.info-item h4 {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.info-item p,
+.info-item a {
+  font-size: 14px;
+  color: #6b6a75;
+  margin: 0;
+  text-align: center; /* ✅ يجعل النصوص متناسقة عند التصغير */
+}
+
+.btn-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Bg-primary-red {
+  background-color: var(--primary-color);
+}
+
+/* ✅ تحسين المظهر في الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;   /* ✅ لتوسيط العناصر عمودياً وأفقياً */
+    justify-content: center;
+    text-align: center;    /* ✅ يجعل النصوص والرموز في المنتصف */
+  }
+
+  .info-item {
+    width: 90%;           /* ✅ يجعل كل عنصر بنفس العرض تقريباً */
+    text-align: center;
+  }
+}
+
+.icon-footer i {
+    font-size: 20px;
+  padding: 10px;
+
+
+}
+
+
+/* Creativity Page */
+
+/* ✨ تأثير الظهور عند تحميل الصفحة */
+.invo-info{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+    transition: all 0.4s ease;
+}
+
+/* ✨ الحركة */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✨ تأثير عند مرور المؤشر */
+.invo-info:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 66, 66, 0.3);
+
+}
