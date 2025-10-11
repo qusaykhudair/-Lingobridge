@@ -461,7 +461,7 @@ textarea.form-control:focus {
 
     /* Navbar */
     .navbar-brand h1 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     .nav-logo {
         width: 40px;
@@ -557,7 +557,7 @@ textarea.form-control:focus {
     .contact-info .info-item {
         flex-direction: column;
         text-align: center;
-        padding: 15px;
+        padding: 10px;
     }
     .contact-info .btn-icon {
         margin-bottom: 10px;
