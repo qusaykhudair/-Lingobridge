@@ -434,3 +434,286 @@ textarea.form-control:focus {
   box-shadow: 0 10px 25px rgba(255, 66, 66, 0.3);
 
 }
+
+/* Responsive Styles for Lingobridge Language Center */
+
+/* Extra Small Devices (Phones, <576px) */
+@media (max-width: 575.98px) {
+    /* Topbar */
+    .container-fluid.bg-dark .row {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 15px;
+    }
+    .container-fluid.bg-dark .col-lg-6 {
+        margin-bottom: 10px;
+    }
+    .somedia-icon a {
+        font-size: 1.2rem;
+        padding: 0 8px;
+    }
+
+    /* Navbar */
+    .navbar-brand h1 {
+        font-size: 1.5rem;
+    }
+    .nav-logo {
+        width: 40px;
+        height: 40px;
+    }
+    .navbar-nav.nav-menu {
+        text-align: center;
+    }
+    .nav-item.nav-link {
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+    .joinUsBtn {
+        display: block !important;
+        margin: 10px auto;
+        width: fit-content;
+    }
+
+    /* Header */
+    .jumbotron {
+        padding: 20px 0;
+        margin-bottom: 50px;
+    }
+    .jumbotron h1 {
+        font-size: 1.8rem;
+    }
+    .jumbotron .display-2 {
+        font-size: 2.2rem;
+    }
+    .fa-globe {
+        font-size: 50px !important;
+    }
+
+    /* About Section */
+    #About .col-lg-5, #About .col-lg-7 {
+        width: 100%;
+    }
+    #About img {
+        margin-bottom: 20px;
+    }
+    .section-title h1 {
+        font-size: 1.8rem;
+    }
+    .section-title h6 {
+        font-size: 0.9rem;
+    }
+
+    /* Feature Section */
+    .bg-image .col-lg-7, .bg-image .col-lg-5 {
+        width: 100%;
+    }
+    .bg-image img {
+        margin-top: 20px;
+    }
+    .btn-icon {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .btn-icon i {
+        font-size: 1.2rem;
+    }
+    .d-flex.mb-3 h4 {
+        font-size: 1.2rem;
+    }
+
+    /* Services Section */
+    .courses-carousel .courses-item img {
+        height: 200px;
+        object-fit: cover;
+    }
+    .courses-text h3 {
+        font-size: 1.2rem;
+    }
+    .courses-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Contact Section */
+    .contact-box {
+        padding: 15px;
+    }
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    .form-control {
+        font-size: 0.9rem;
+    }
+    .btn-submit {
+        width: 100%;
+        padding: 10px;
+    }
+    .contact-info .info-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    .contact-info .btn-icon {
+        margin-bottom: 10px;
+    }
+
+    /* Footer */
+    #footer .col-md-6 {
+        text-align: center;
+    }
+    .icon-footer {
+        justify-content: center;
+    }
+    #footer h3 {
+        font-size: 1.5rem;
+    }
+    #footer p, #footer a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Devices (Tablets, ≥576px and <768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Topbar */
+    .container-fluid.bg-dark .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .somedia-icon a {
+        font-size: 1.4rem;
+        padding: 0 10px;
+    }
+
+    /* Navbar */
+    .navbar-brand h1 {
+        font-size: 1.8rem;
+    }
+    .nav-logo {
+        width: 50px;
+        height: 50px;
+    }
+    .joinUsBtn {
+        display: block !important;
+        margin: 10px auto;
+    }
+
+    /* Header */
+    .jumbotron h1 {
+        font-size: 2rem;
+    }
+    .jumbotron .display-2 {
+        font-size: 2.5rem;
+    }
+    .fa-globe {
+        font-size: 60px !important;
+    }
+
+    /* About Section */
+    #About .col-lg-5, #About .col-lg-7 {
+        width: 100%;
+    }
+    #About img {
+        margin-bottom: 20px;
+    }
+
+    /* Feature Section */
+    .bg-image .col-lg-7, .bg-image .col-lg-5 {
+        width: 100%;
+    }
+    .bg-image img {
+        margin-top: 20px;
+    }
+
+    /* Services Section */
+    .courses-carousel .courses-item img {
+        height: 250px;
+    }
+    .courses-text h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Contact Section */
+    .contact-box {
+        padding: 20px;
+    }
+    .contact-info .info-item {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Medium Devices (Tablets, ≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Topbar */
+    .container-fluid.bg-dark .row {
+        padding: 10px 20px;
+    }
+    .somedia-icon a {
+        font-size: 1.5rem;
+    }
+
+    /* Navbar */
+    .navbar-brand h1 {
+        font-size: 2rem;
+    }
+    .nav-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Header */
+    .jumbotron h1 {
+        font-size: 2.5rem;
+    }
+    .jumbotron .display-2 {
+        font-size: 3rem;
+    }
+
+    /* About Section */
+    #About img {
+        height: 400px;
+    }
+
+    /* Feature Section */
+    .bg-image img {
+        height: 400px;
+    }
+
+    /* Services Section */
+    .courses-carousel .courses-item img {
+        height: 300px;
+    }
+
+    /* Contact Section */
+    .contact-box {
+        padding: 25px;
+    }
+}
+
+/* Large Devices (Desktops, ≥992px) */
+@media (min-width: 992px) {
+    /* Ensure desktop layout remains as designed */
+    .container-fluid.bg-dark .row {
+        padding: 15px 30px;
+    }
+    .navbar-brand h1 {
+        font-size: 2.5rem;
+    }
+    .nav-logo {
+        width: 70px;
+        height: 70px;
+    }
+    .jumbotron h1 {
+        font-size: 3rem;
+    }
+    .jumbotron .display-2 {
+        font-size: 4rem;
+    }
+}
+
+/* Extra Large Devices (Large Desktops, ≥1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
