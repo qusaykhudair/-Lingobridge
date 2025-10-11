@@ -23,6 +23,7 @@ a:hover{
 
 }
 
+
 .BGblack{
     background-color: var(--secondary-color);
 }
@@ -435,6 +436,7 @@ textarea.form-control:focus {
 
 }
 
+
 /* Responsive Styles for Lingobridge Language Center */
 
 /* Extra Small Devices (Phones, <576px) */
@@ -451,6 +453,10 @@ textarea.form-control:focus {
     .somedia-icon a {
         font-size: 1.2rem;
         padding: 0 8px;
+    }
+
+    .info-navbar {
+      font-size: 15px;
     }
 
     /* Navbar */
