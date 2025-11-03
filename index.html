@@ -118,7 +118,7 @@
 
 
     <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
+    <div  class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
         <div class="container text-center my-3 py-5">
             <h1 class="text-white mt-4 mb-4">Bridge your language</h1>
             <h1 class="text-white display-2 mb-5"> Expand your world <i class="fa-solid fa-globe fa-beat-fade"
@@ -129,7 +129,7 @@
 
 
     <!-- About Start -->
-    <div id="About" class="container-fluid py-5">
+    <div data-animate id="About" class="container-fluid py-5">
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
@@ -190,7 +190,7 @@
 
 
     <!-- Feature Start -->
-    <div class="container-fluid bg-image" style="margin: 90px 0;">
+    <div data-animate class="container-fluid bg-image" style="margin: 90px 0;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 my-5 pt-5 pb-lg-5">
@@ -246,7 +246,7 @@
 
 
     <!-- Services Start -->
-    <div id="Services" class="container-fluid px-0 py-5">
+    <div data-animate id="Services" class="container-fluid px-0 py-5">
         <div class="row mx-0 justify-content-center pt-5">
             <div class="col-lg-6">
                 <div class="section-title text-center position-relative mb-4">
@@ -406,7 +406,7 @@
     <!-- Services End -->
 
 <!-- objective Start -->
-<section id="objective" class="py-5 bg-light">
+<section data-animate id="objective" class="py-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
   <div class="section-title text-center position-relative mb-4">
@@ -431,7 +431,7 @@
         </div>
       </div>
 
-      <div class="col-md-4 card-info">
+      <div  class="col-md-4 card-info">
         <div class="card border-0 shadow-sm h-100 text-center p-4">
           <div class="card-body">
             <h4 class="mb-3">Our Mission</h4>
@@ -460,7 +460,7 @@
 
 
     <!-- Contact Start -->
-    <div id="Contact" class="container-fluid py-5">
+    <div id="Contact" class="container-fluid py-5 mb-5">
         <div class="container py-5">
             <div class="align-items-center">
                 <div>
@@ -470,7 +470,7 @@
                     </div>
                     <section class="contact-section">
 
-                        <div class="contact-box w-100">
+                        <div  class="contact-box w-100 mb-5">
 
 
                             <!-- ✅ استخدم FormSubmit -->
@@ -570,7 +570,7 @@
 
 
     <!-- Footer Start -->
-    <div id="footer" class="container-fluid position-relative overlay-top bg-dark text-white-50 py-5" style="margin-top: 90px;">
+    <div  id="footer" class="container-fluid position-relative overlay-top bg-dark text-white-50 py-5" style="margin-top: 90px;">
         <div class="container mt-5 pt-5">
             <div class="row">
                 <div class="col-md-6 mb-5">
@@ -635,6 +635,17 @@
     <a style="border-radius: 50%;" href="#" class="btn btn-lg Bg-primary-red rounded rounded-fill btn-lg-square back-to-top"><i
            style="color: white;" class="fa fa-angle-double-up"></i></a>
 
+           <script>
+document.addEventListener("scroll", () => {
+  document.querySelectorAll("[data-animate]").forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
+</script>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -646,6 +657,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
      <script src="js/bootstrap.bundle.min.js"></script>
+    
 </body>
 
 </html>
