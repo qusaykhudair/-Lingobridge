@@ -6,8 +6,8 @@
     
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+    scroll-behavior: smooth;
 }
 
 a{
@@ -214,17 +214,214 @@ color: var(--primary-color);
 
 
 
-
-@media (max-width: 768px) {
-    .courses-item {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .section-title h1 {
-        font-size: 28px;
-    }
+/* ===== Objective, Mission & Vision Section ===== */
+#objective {
+  background: linear-gradient(135deg, #f9fafc 0%, #eef3f7 100%);
+  position: relative;
+  overflow: hidden;
 }
+
+#objective::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.1), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+#objective::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  left: -120px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.15), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+#objective .container {
+  position: relative;
+  z-index: 1;
+}
+
+#objective h6 {
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+}
+
+#objective h1 {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+#objective p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+#objective .card {
+  border-radius: 20px;
+  background: #ffffff;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(253, 13, 13, 0.1);
+}
+
+#objective .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(253, 13, 29, 0.15);
+}
+
+#objective .card-body h4 {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+#objective .card-body p {
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+/* ==============================
+   MEDIA QUERIES
+============================== */
+
+/* 💻 Large Desktops (≥1200px) */
+@media (min-width: 1200px) {
+  #objective h1 {
+    font-size: 3rem;
+  }
+
+  #objective p {
+    font-size: 1.15rem;
+  }
+
+  #objective .card {
+    padding: 35px;
+  }
+}
+
+/* 🖥 Medium Desktops and Laptops (992px–1199px) */
+@media (max-width: 1199px) {
+  #objective {
+    padding: 70px 40px;
+  }
+
+  #objective h1 {
+    font-size: 2.5rem;
+  }
+
+  #objective p {
+    font-size: 1.05rem;
+  }
+}
+
+/* 💻 Tablets (768px–991px) */
+@media (max-width: 991px) {
+  #objective {
+    padding: 60px 30px;
+  }
+
+  #objective h1 {
+    font-size: 2.2rem;
+  }
+
+  #objective .card {
+    margin-bottom: 30px;
+  }
+
+ 
+  #objective .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #objective .col-md-4 {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .card-info {
+    margin-top: 20px;
+  }
+}
+
+
+/* 📱 Large Phones (576px–767px) */
+@media (max-width: 767px) {
+  #objective {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  #objective h1 {
+    font-size: 1.9rem;
+  }
+
+  #objective p {
+    font-size: 1rem;
+  }
+
+  #objective .card {
+    padding: 25px;
+  }
+.card-info {
+    margin-top: 20px;
+}
+}
+
+/* 📱 Small Phones (≤575px) */
+@media (max-width: 575px) {
+  #objective {
+    padding: 40px 15px;
+  }
+
+  #objective h1 {
+    font-size: 1.6rem;
+  }
+
+  #objective p {
+    font-size: 0.95rem;
+  }
+
+  #objective .card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  #objective .card h4 {
+    font-size: 1.2rem;
+  }
+
+  #objective .card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 📱 Extra Small Devices (≤400px) */
+@media (max-width: 400px) {
+  #objective h1 {
+    font-size: 1.4rem;
+  }
+
+  #objective p {
+    font-size: 0.9rem;
+  }
+
+  #objective .card {
+    padding: 18px;
+  }
+}
+
+
 
 
 
@@ -539,6 +736,8 @@ textarea.form-control:focus {
     .courses-text p {
         font-size: 0.9rem;
     }
+
+
 
     /* Contact Section */
     .contact-box {
