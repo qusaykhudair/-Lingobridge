@@ -18,9 +18,202 @@ a{
 
 a:hover{
     text-decoration: none;
-    color:#ff4242;
-    transform: scale(1.1);
+    color:#ff4242 !important;
+    transform: scale(1.01);
 
+}
+
+/* =============================
+   🌍 زر التبديل بين اللغات الحديث
+   ============================= */
+.language-toggle-modern {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f0f4f8;
+  border-radius: 50px;
+  padding: 6px 12px;
+  box-shadow: 0 2px 6px rgba(147, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* روابط اللغة */
+.language-toggle-modern .lang-btn {
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.language-toggle-modern .lang-btn:hover {
+  color: #225b90;
+}
+
+.language-toggle-modern .lang-btn.active {
+  color: #fff;
+  background: var(--primary-color);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.language-toggle-modern .lang-btn.active:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+ 
+
+
+/* =============================
+   الزر المتحرك بين اللغتين
+   ============================= */
+.toggle-switch {
+  position: relative;
+  width: 45px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-label {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-ball {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* عند التفعيل */
+.toggle-switch input:checked + .toggle-label {
+  background-color: var(--primary-color);
+}
+
+.toggle-switch input:checked + .toggle-label .toggle-ball {
+  transform: translateX(21px);
+}
+
+/* ========================================
+   ميديا كويري: زر اللغة في القائمة المنسدلة (موبايل)
+   ======================================== */
+@media (max-width: 991.98px) {
+
+  /* الحاوية: نفس التصميم لكن أصغر وأنيق */
+  .language-toggle-modern {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1.5px solid #e3f2fd;
+    border-radius: 50px;
+    padding: 8px 14px;
+    box-shadow: 0 4px 12px rgba(237, 8, 8, 0.12);
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    max-width: 240px;
+    width: 100%;
+  }
+
+  .language-toggle-modern:hover {
+    box-shadow: 0 6px 18px rgba(229, 30, 33, 0.18);
+    transform: translateY(-1px);
+    border-color: var(--primary-color);
+  }
+
+  /* روابط اللغة (EN / العربية) */
+  .language-toggle-modern .lang-btn {
+    font-size: 13px;
+    font-weight: 700;
+    color: #546e7a;
+    padding: 6px 10px;
+    min-width: 38px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .language-toggle-modern .lang-btn:hover {
+    color: var(--primary-color);
+  }
+
+  .language-toggle-modern .lang-btn.active {
+    color: #fff !important;
+    background: linear-gradient(135deg, var(--primary-color), #1976d2);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(25, 118, 210, 0.3);
+  }
+
+  .language-toggle-modern .lang-btn.active:hover {
+    background: white;
+    color: var(--primary-color) !important;
+    box-shadow: 0 0 0 2px var(--primary-color);
+  }
+
+  /* مفتاح التبديل (أصغر وأنيق) */
+  .toggle-switch {
+    width: 40px;
+    height: 22px;
+  }
+
+  .toggle-label {
+    background-color: #cfd8dc;
+    border-radius: 30px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .toggle-ball {
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  /* عند التفعيل (العربية) */
+  .toggle-switch input:checked + .toggle-label {
+    background: linear-gradient(135deg, var(--primary-color), #1976d2);
+  }
+
+  .toggle-switch input:checked + .toggle-label .toggle-ball {
+    transform: translateX(18px);
+  }
+
+  /* تحسين زر "انضم إلينا" في القائمة */
+  .joinUsBtn {
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2) !important;
+    transition: all 0.3s ease !important;
+    margin-top: 12px !important;
+    width: 100% !important;
+  }
+
+  .joinUsBtn:hover {
+    transform: translateY(0px) !important;
+    box-shadow: 0 6px 18px rgba(210, 25, 50, 0.3) !important;
+  }
 }
 
 
@@ -72,7 +265,7 @@ color: var(--primary-color);
 .joinUsBtn{
     color: var(--bg-color);
     background-color: var(--primary-color);
-    border-radius: 8px;
+    border-radius: 50px;
     transition: all 0.3s ease;
 }
 
@@ -900,11 +1093,11 @@ textarea.form-control:focus {
         padding: 15px 30px;
     }
     .navbar-brand h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .nav-logo {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
     .jumbotron h1 {
         font-size: 3rem;
@@ -1017,3 +1210,4 @@ textarea.form-control:focus {
     transform: translateY(0);
   }
 }
+

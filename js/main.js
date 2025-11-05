@@ -56,6 +56,7 @@ $('.back-to-top').click(function (e) {
 
     // Courses carousel
     $(".courses-carousel").owlCarousel({
+        rtl: true,
         autoplay: true,
         smartSpeed: 1500,
         loop: true,
