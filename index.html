@@ -738,6 +738,61 @@ What makes it special? <br> <br>
                 window.location.href = 'index.html';
             }
         });
+        
+
+        // ==============================
+//  Regex Patterns
+// ==============================
+const nameRegex = /^[a-zA-Z\s]{3,40}$/; 
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+const subjectRegex = /^.{3,60}$/; 
+const messageRegex = /^.{10,500}$/; 
+
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    // منع الإرسال في حالة خطأ
+    let errors = [];
+
+    // الحصول على القيم
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let subject = document.getElementById("subject").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    // ==============================
+    //   VALIDATION STARTS
+    // ==============================
+
+    // Validate Name
+    if (!nameRegex.test(name)) {
+        errors.push("Full Name must be alphabetic only and between 3–40 characters.");
+    }
+
+    // Validate Email
+    if (!emailRegex.test(email)) {
+        errors.push("Please enter a valid email address.");
+    }
+
+    // Validate Subject
+    if (!subjectRegex.test(subject)) {
+        errors.push("Subject must be between 3–60 characters.");
+    }
+
+    // Validate Message
+    if (!messageRegex.test(message)) {
+        errors.push("Message must be between 10–500 characters.");
+    }
+
+    // إذا في أخطاء — نوقف الإرسال
+    if (errors.length > 0) {
+        e.preventDefault();
+
+        alert("⚠️ Please fix the following:\n\n" + errors.join("\n"));
+        return false;
+    }
+
+    return true;
+});
 
     </script>
 

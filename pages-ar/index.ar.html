@@ -714,6 +714,49 @@
             }
         });
 
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+    // الحقول
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // 🔥 ريجكس التحقق
+    const nameRegex = /^[\u0621-\u064A ]{3,40}$/; 
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const subjectRegex = /^[\u0621-\u064A0-9a-zA-Z ]{3,60}$/;
+    const messageRegex = /^[\u0621-\u064A0-9a-zA-Z\s.,!?-]{10,500}$/;
+
+    // التحقق من الاسم
+    if (!nameRegex.test(name)) {
+        alert("❌ يرجى إدخال اسم صحيح باللغة العربية، من 3 إلى 40 حرفًا.");
+        e.preventDefault();
+        return;
+    }
+
+    // التحقق من البريد
+    if (!emailRegex.test(email)) {
+        alert("❌ بريد إلكتروني غير صالح.");
+        e.preventDefault();
+        return;
+    }
+
+    // التحقق من الموضوع
+    if (!subjectRegex.test(subject)) {
+        alert("❌ يرجى إدخال موضوع صحيح (بدون رموز غريبة) من 3 إلى 60 حرفًا.");
+        e.preventDefault();
+        return;
+    }
+
+    // التحقق من الرسالة
+    if (!messageRegex.test(message)) {
+        alert("❌ الرسالة يجب أن تكون بين 10 و 500 حرف، وبدون رموز غير مسموح بها.");
+        e.preventDefault();
+        return;
+    }
+});
+
     </script>
 
 
