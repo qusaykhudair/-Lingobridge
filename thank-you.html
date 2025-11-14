@@ -1,14 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You</title>
+  <link rel="shortcut icon" href="favicon.ico" type="img/lingoLogo.jpg">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #ff7676, #ff4242);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .thank-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 50px 40px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.2s ease;
+      max-width: 400px;
+    }
+
+    .thank-icon {
+      font-size: 70px;
+      color: #fff;
+      background: rgb(255, 0, 0);
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: #fff;
+      color: #ff4242;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #ff4242;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-    <h2 style="text-align:center;margin-top:100px;color:#ff4242;">
-  ✅ Thank you! Your message has been sent successfully.
-</h2>
-
+  <div class="thank-container">
+    <div class="thank-icon">☺️</div>
+    <h2>Thank You!</h2>
+    <p>Your message has been sent successfully.<br>We’ll get back to you soon.</p>
+    <a href="index.html" class="back-btn">Go Back Home</a>
+  </div>
 </body>
 </html>
